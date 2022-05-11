@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import App from "./App";
+import "./index.css";
 import reportWebVitals from './reportWebVitals';
 
 import { createStore, applyMiddleware } from 'redux';
 import ReduxThunk from 'redux-thunk'
 import { Provider } from 'react-redux';
-import rootReducer from './reducers';
+import giphyReducer from "./reducers";
 
-const store = createStore(rootReducer, applyMiddleware(ReduxThunk))
+const store = createStore(giphyReducer, applyMiddleware(ReduxThunk))
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
