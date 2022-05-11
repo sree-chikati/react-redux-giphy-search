@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import {
-  changeUserInput,
-  changeInitialInput,
-} from "./actions";
+import { changeUserInput, changeInitialInput} from "./actions";
 
+// Used class instead of function to use variablse globally
+// extending component and connecting to mapState allows me to do so
 class Search extends Component {
-  trimSpaces = value => {
+  inputSpacing = value => {
     if (value.trim() === "") {
       return false;
     } else {
@@ -16,12 +15,13 @@ class Search extends Component {
     }
   };
 
+  // onSubmit was getting too long so moved it outside
   onFormSubmit = e => {
     e.preventDefault();
-    if (!this.trimSpaces(e.target.searchBox.value)) return false;
+    if (!this.inputSpacing(e.target.search.value)) return false;
 
-    if (this.props.giphy.userInput !== e.target.searchBox.value) {
-      this.props.dispatch(changeUserInput(e.target.searchBox.value));
+    if (this.props.giphy.userInput !== e.target.search.value) {
+      this.props.dispatch(changeUserInput(e.target.search.value));
       this.props.dispatch(changeInitialInput(true));
     }
   };
@@ -30,13 +30,7 @@ class Search extends Component {
     return (
       <div className="add-input">
         <form onSubmit={this.onFormSubmit}>
-          <input
-            type="text"
-            id="thing"
-            name="searchBox"
-            required
-            placeholder="Search a Gif Today!"
-          />
+          <input type="text" name="search" required placeholder="Search a Gif Today!" />
           <button className="submit">submit</button>
         </form>
       </div>

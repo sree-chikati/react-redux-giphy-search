@@ -1,7 +1,7 @@
 export default function giphyReducer(
   state = { giphy: [], shouldFetch: true}, action) {
   switch (action.type) {
-    case "FETCH_GIPHY_FULFILLED": {
+    case "FETCH_GIPHY": {
       return {
         ...state,
         shouldFetch: false,

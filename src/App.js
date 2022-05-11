@@ -5,8 +5,11 @@ import Search from "./Search";
 import { connect } from "react-redux";
 import { fetchGiphy } from "./actions";
 
+// Used class instead of function to use variablse globally
+// extending component and connecting to mapState allows me to do so
 class App extends Component {
   render() {
+    // fetch data according to user input and initial input
     if (this.props.giphy.initialInput) {
       this.props.dispatch(fetchGiphy(this.props.giphy.userInput));
     }

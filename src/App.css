@@ -1,79 +1,86 @@
+/* ----- Header -----  */
 .h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 2rem 0;
-  font-size: 3rem;
-  color: white;
-  }
-  
-  .add-input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 2rem 0;
-  }
-  
-  .add-input > form input{
-  font-size: 1rem;
-  padding: 1rem;
-  border: 1px solid;
-  border-radius: 50px 0 0 50px;
-  
-  }
-  .add-input > form button{
-  font-size: 1rem;
-  padding: 1rem;
-  border: 1px solid;
-  border-radius: 0 50px 50px 0;
-  background-color: #54ffac;
-  }
-  
-  .results {
-  padding: 1rem;
-  }
-  .results ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  list-style: none;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  }
-  .results li {
-  margin-bottom: 55px;
-  position: relative;
-  width: 595px;
-  height: 425px;
-  }
-  .results li img {
-  height: 100%;
-  width: 100%;
-  }
-  
-  footer{
-  color: white;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  }
-  
-  footer h3{
-      color: white;
-      font-size: 15px;
-      text-transform: uppercase;
-  }
-  
-  footer p{
-      padding: 0.5rem;
-      text-transform: uppercase;
-  }
-  
-  footer span{
-      color:#54ffac;;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 3rem;
+    color: white;
+}
+
+/* ----- Search -----  */
+.add-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.add-input > form input{
+    font-size: 1rem;
+    padding: 1rem;
+    border: 1px solid;
+    border-radius: 50px 0 0 50px;
+}
+
+.add-input > form button{
+    font-size: 1rem;
+    padding: 1rem;
+    border: 1px solid;
+    border-radius: 0 50px 50px 0;
+    background-color: #54ffac;
+}
+
+/* ----- Results -----  */
+.results {
+    padding: 1rem;
+}
+
+.results ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.results li {
+    margin-bottom: 55px;
+    position: relative;
+    width: 595px;
+    height: 425px;
+}
+
+.results li img {
+    height: 100%;
+    width: 100%;
+}
+
+/* ----- Footer -----  */
+footer{
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+footer h3{
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+footer p{
+    padding: 0.5rem;
+    text-transform: uppercase;
+}
+
+footer span{
+    color:#54ffac;;
+}

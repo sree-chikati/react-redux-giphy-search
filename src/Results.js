@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
+// Used class instead of function to use variablse globally
+// extending component and connecting to mapState allows me to do so
 class Results extends Component {
+  // update compnent
   shouldComponentUpdate(newProps, newState) {
     if (
       this.props.giphy.fetched !== newProps.giphy.fetched ||
@@ -13,6 +16,7 @@ class Results extends Component {
     }
   }
 
+  // remders list of mapped data
   renderList = () => {
     if (this.props.giphy.fetched !== false) {
       return this.props.giphy.giphy.map(e => {
@@ -25,6 +29,7 @@ class Results extends Component {
     }
   };
 
+  // returns the rendered data
   render() {
     return (
       <div className="results">
